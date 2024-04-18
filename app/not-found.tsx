@@ -33,5 +33,13 @@ export default NotFound
 
 export const metadata: Metadata = {
     title: "Not Found | 404",
-    description: "This Page Noting Found!"
+    description: "This Page Noting Found!",
+    authors: [
+        {
+            name: 'Arash Altafi',
+        }
+    ],
+    icons: {
+        icon: "/images/404.png",
+    }
 }
