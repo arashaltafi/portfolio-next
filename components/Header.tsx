@@ -1,27 +1,15 @@
 "use client"
 
-import React, { useEffect } from 'react'
+import React from 'react'
 import { IoMdMenu } from "react-icons/io";
-import tippy from 'tippy.js';
 import { motion } from "framer-motion"
+import { Tooltip } from 'react-tooltip'
 
 const Header = () => {
   const handleClickPdf = (e: any) => {
     e.preventDefault();
     window.open("https://arashaltafi.ir/resume_en.pdf");
   }
-
-  useEffect(() => {
-    tippy('#arashaltafi', {
-      content: `<b>See Resume</b>`,
-      allowHTML: true,
-      placement: 'bottom',
-      arrow: false,
-      animation: 'fade',
-      duration: 500,
-      theme: 'material',
-    });
-  }, [])
 
   const scrollToId = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
@@ -70,6 +58,11 @@ const Header = () => {
       <div className='md:hidden flex flex-row gap-x-8 items-center justify-center backdrop-blur-[5px]'>
         <IoMdMenu className='icon' />
       </div>
+
+      <Tooltip anchorSelect="#arashaltafi" place="bottom">
+        <b>See Resume</b>
+      </Tooltip>
+
       <motion.button
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
