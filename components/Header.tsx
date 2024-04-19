@@ -26,7 +26,7 @@ const Header = () => {
 
   return (
     <header className='w-full flex flex-row items-stretch justify-between'>
-      <div className={`hidden md:flex flex-row gap-x-8 items-center justify-center`}>
+      <div className={`hidden md:flex flex-row gap-x-8 items-center justify-center *:capitalize`}>
         <motion.button
           className='py-8 px-4 h1'
           initial={{ opacity: 0, scale: 0.9, y: -20 }}
@@ -34,7 +34,7 @@ const Header = () => {
           transition={{ repeat: 0, duration: 0.5, delay: 0, stiffness: 400, damping: 10, type: 'tween' }}
           viewport={{ once: true }}
         >
-          <Link href="/contact" className='header'>contact</Link>
+          <Link href="/" className='header'>home</Link>
         </motion.button>
         <motion.button
           className='py-8 px-4 h1'
@@ -43,7 +43,7 @@ const Header = () => {
           transition={{ repeat: 0, duration: 0.5, delay: 0.3, stiffness: 400, damping: 10, type: 'tween' }}
           viewport={{ once: true }}
         >
-          <Link href="/works" className='header'>works</Link>
+          <Link href="/contact" className='header'>about</Link>
         </motion.button>
         <motion.button
           className='py-8 px-4 h1'
@@ -52,7 +52,7 @@ const Header = () => {
           transition={{ repeat: 0, duration: 0.5, delay: 0.6, stiffness: 400, damping: 10, type: 'tween' }}
           viewport={{ once: true }}
         >
-          <Link href="/resume" className='header'>resume</Link>
+          <Link href="/works" className='header'>skills</Link>
         </motion.button>
         <motion.button
           className='py-8 px-4 h1'
@@ -61,7 +61,7 @@ const Header = () => {
           transition={{ repeat: 0, duration: 0.5, delay: 0.9, stiffness: 400, damping: 10, type: 'tween' }}
           viewport={{ once: true }}
         >
-          <Link href="/" className='header'>home</Link>
+          <Link href="/resume" className='header'>projects</Link>
         </motion.button>
       </div>
       <div className='md:hidden flex flex-row gap-x-8 items-center justify-center'>
