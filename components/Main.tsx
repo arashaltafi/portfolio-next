@@ -38,6 +38,10 @@ const Main = () => {
                     height={1000}
                     quality={100}
                     loading="eager"
+                    style={{
+                        borderBottomLeftRadius: '50% 10%',
+                        borderBottomRightRadius: '50% 10%',
+                    }}
                 />
             </motion.div>
 
