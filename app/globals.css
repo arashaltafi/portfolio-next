@@ -62,12 +62,16 @@
     @apply text-3xl;
   }
 
+  .h2 {
+    @apply text-2xl;
+  }
+
   .icon {
     @apply text-xl hover:-translate-y-2 transition-all delay-100 text-slate-900 dark:text-slate-100 hover:text-sky-500;
   }
 
   .header {
-    @apply text-3xl hover:text-sky-500 transition-all;
+    @apply text-2xl hover:text-sky-500 transition-all;
   }
 
   .custom-animation {

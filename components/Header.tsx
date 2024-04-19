@@ -25,10 +25,10 @@ const Header = () => {
   }, [])
 
   return (
-    <header className='w-full flex flex-row items-stretch justify-between'>
-      <div className={`hidden md:flex flex-row gap-x-8 items-center justify-center *:capitalize`}>
+    <header className='fixed left-0 right-0 top-0 w-full flex flex-row items-stretch justify-between z-30 py-4 px-8'>
+      <div className={`hidden md:flex flex-row gap-x-4 items-center justify-center *:capitalize backdrop-blur-[5px]`}>
         <motion.button
-          className='py-8 px-4 h1'
+          className='py-8 px-4'
           initial={{ opacity: 0, scale: 0.9, y: -20 }}
           whileInView={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ repeat: 0, duration: 0.5, delay: 0, stiffness: 400, damping: 10, type: 'tween' }}
@@ -37,7 +37,7 @@ const Header = () => {
           <Link href="/" className='header'>home</Link>
         </motion.button>
         <motion.button
-          className='py-8 px-4 h1'
+          className='py-8 px-4'
           initial={{ opacity: 0, scale: 0.9, y: -20 }}
           whileInView={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ repeat: 0, duration: 0.5, delay: 0.3, stiffness: 400, damping: 10, type: 'tween' }}
@@ -46,7 +46,7 @@ const Header = () => {
           <Link href="/contact" className='header'>about</Link>
         </motion.button>
         <motion.button
-          className='py-8 px-4 h1'
+          className='py-8 px-4'
           initial={{ opacity: 0, scale: 0.9, y: -20 }}
           whileInView={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ repeat: 0, duration: 0.5, delay: 0.6, stiffness: 400, damping: 10, type: 'tween' }}
@@ -55,7 +55,7 @@ const Header = () => {
           <Link href="/works" className='header'>skills</Link>
         </motion.button>
         <motion.button
-          className='py-8 px-4 h1'
+          className='py-8 px-4'
           initial={{ opacity: 0, scale: 0.9, y: -20 }}
           whileInView={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ repeat: 0, duration: 0.5, delay: 0.9, stiffness: 400, damping: 10, type: 'tween' }}
@@ -64,7 +64,7 @@ const Header = () => {
           <Link href="/resume" className='header'>projects</Link>
         </motion.button>
       </div>
-      <div className='md:hidden flex flex-row gap-x-8 items-center justify-center'>
+      <div className='md:hidden flex flex-row gap-x-8 items-center justify-center backdrop-blur-[5px]'>
         <IoMdMenu className='icon' />
       </div>
       <motion.button

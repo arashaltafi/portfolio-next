@@ -22,11 +22,11 @@ const Main = () => {
     `;
 
     return (
-        <div className="flex-1 select-none w-full flex items-center justify-center">
+        <div className="select-none w-full h-screen flex items-center justify-center">
             <ParticlesComponent particlesType={ParticlesType.Links} />
 
             <motion.div
-                className="w-full md:w-3/4 lg:w-2/3 xl:w-3/5 max-h-auto mx-auto contrast-[110%] brightness-105 hover:brightness-110 drop-shadow-3xl hover:drop-shadow-4xl self-end"
+                className="w-full md:w-3/4 lg:w-2/3 max-h-auto mx-auto contrast-[110%] brightness-105 hover:brightness-110 drop-shadow-3xl hover:drop-shadow-4xl self-end"
                 initial={{ opacity: 0, scale: 0.8, filter: 'blur(10px)' }}
                 whileInView={{ opacity: 1, scale: 1, filter: 'blur(0px)' }}
                 transition={{ repeat: 0, duration: 2, delay: 0 }}
