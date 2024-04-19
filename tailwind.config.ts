@@ -17,6 +17,10 @@ const config: Config = {
         "torch2":
           'radial-gradient(525px at 50% 50%, #0EA5E922, transparent 50%)',
       },
+      dropShadow: {
+        '3xl': '0 35px 35px rgba(100, 116, 139.25)',
+        '4xl': '0 50px 50px rgba(100, 116, 139.25)',
+      }
     },
   },
   plugins: [],

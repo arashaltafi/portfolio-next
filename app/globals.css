@@ -10,6 +10,35 @@
   body {
     @apply font-normal bg-slate-100 dark:bg-slate-950 text-slate-900 dark:text-slate-100;
   }
+
+  /* WebKit (Chrome, Safari) */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #64748B;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 2px;
+  }
+
+  /* Firefox */
+  ::-moz-scrollbar {
+    width: 8px;
+  }
+
+  ::-moz-scrollbar-track {
+    background: #64748B;
+  }
+
+  ::-moz-scrollbar-thumb {
+    background: #334155;
+    border-radius: 2px;
+  }
+
 }
 
 @layer components {
@@ -32,4 +61,45 @@
   .h1 {
     @apply text-3xl;
   }
+
+  .icon {
+    @apply text-xl hover:-translate-y-2 transition-all delay-100 text-slate-900 dark:text-slate-100 hover:text-sky-500;
+  }
+
+  .custom-animation {
+    animation: translateAndBack 0.5s ease-in-out infinite alternate;
+  }
+
+  .custom-animation-rotate {
+    animation: translateRotate360 1s ease-in-out 0.5s 1;
+  }
+
+  @keyframes translateAndBack {
+    0% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-10px);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes translateRotate360 {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    50% {
+      transform: rotate(180deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
 }
