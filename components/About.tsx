@@ -8,6 +8,7 @@ import { FaReact } from "react-icons/fa";
 import { FaAndroid } from "react-icons/fa";
 import { IoMdPerson } from "react-icons/io";
 import { motion } from "framer-motion"
+import Image from 'next/image';
 
 const About = () => {
     return (
@@ -90,6 +91,15 @@ const About = () => {
                 <FaAndroid className='text-sky-500 size-12 absolute top-1/3 left-1/3 shake2' />
                 <FaReact className='text-sky-500 size-12 absolute bottom-20 left-1/2 shake3' />
             </motion.div>
+
+            <Image
+                className='absolute bottom-0 right-0 mr-[-4rem] -z-10'
+                src="/images/pattern-r.svg"
+                height={700}
+                width={320}
+                loading='lazy'
+                alt="pattern"
+            />
         </div>
     )
 }

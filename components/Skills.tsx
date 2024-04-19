@@ -22,6 +22,7 @@ import { FaBootstrap } from "react-icons/fa";
 import { SiSocketdotio } from "react-icons/si";
 import { FaSass } from "react-icons/fa";
 import { Tooltip } from 'react-tooltip';
+import Image from 'next/image';
 
 const Skills = () => {
     const [skills, setSkills] = useState<{
@@ -125,7 +126,7 @@ const Skills = () => {
                     transition={{ repeat: 0, duration: 0.5, delay: 0.3, stiffness: 400, damping: 10, type: 'tween' }}
                     viewport={{ once: true }}
                 >
-                    <h3>My Skills</h3>
+                    <h3>Skills</h3>
                     <FaCode className='text-sky-500' />
                 </motion.h2>
                 <div className='grid grid-cols-4 items-center justify-center gap-x-8 gap-y-4'>
@@ -148,6 +149,15 @@ const Skills = () => {
                     }
                 </div>
             </div>
+
+            <Image
+                className='absolute bottom-0 left-0 ml-[-4rem] -z-10'
+                src="/images/pattern-l.svg"
+                height={700}
+                width={320}
+                loading='lazy'
+                alt="pattern"
+            />
         </div>
     )
 }
