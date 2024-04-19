@@ -4,6 +4,7 @@ import Image from 'next/image'
 import React from 'react'
 import ParticlesComponent, { ParticlesType } from './ParticlesComponent'
 import Typewriter from 'typewriter-effect';
+import { motion } from "framer-motion"
 
 const Main = () => {
     const customStyle = 'text-shadow: 5px 5px 20px'
@@ -24,15 +25,22 @@ const Main = () => {
         <div className="flex-1 select-none w-full flex items-center justify-center">
             <ParticlesComponent particlesType={ParticlesType.Links} />
 
-            <Image
-                src="/images/bg1.png"
-                alt="Author Logo"
-                className="w-full md:w-3/4 lg:w-2/3 xl:w-3/5 max-h-auto mx-auto contrast-[110%] brightness-105 hover:brightness-110 drop-shadow-3xl hover:drop-shadow-4xl self-end transition-all duration-150 delay-100"
-                width={1000}
-                height={1000}
-                quality={100}
-                loading="eager"
-            />
+            <motion.div
+                className="w-full md:w-3/4 lg:w-2/3 xl:w-3/5 max-h-auto mx-auto contrast-[110%] brightness-105 hover:brightness-110 drop-shadow-3xl hover:drop-shadow-4xl self-end"
+                initial={{ opacity: 0, scale: 0.8, filter: 'blur(10px)' }}
+                whileInView={{ opacity: 1, scale: 1, filter: 'blur(0px)' }}
+                transition={{ repeat: 0, duration: 2, delay: 0 }}
+                viewport={{ once: true }}>
+                <Image
+                    src="/images/bg1.png"
+                    alt="Author Logo"
+                    width={1000}
+                    height={1000}
+                    quality={100}
+                    loading="eager"
+                />
+            </motion.div>
+
 
             <div className='text-2xl md:text-4xl lg:text-7xl absolute bottom-[25%]'>
                 <Typewriter

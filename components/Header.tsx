@@ -27,38 +27,57 @@ const Header = () => {
   return (
     <header className='w-full flex flex-row items-stretch justify-between'>
       <div className={`hidden md:flex flex-row gap-x-8 items-center justify-center`}>
-        <Link
-          className={`h1 hover:text-sky-500 hover:custom-animation transition-all duration-100 delay-100 py-8 px-4`}
-          href="/contact">contact
-        </Link>
-        <Link
-          className={`h1 hover:text-sky-500 hover:custom-animation transition-all duration-100 delay-100 py-8 px-4`}
-          href="/works">works
-        </Link>
-        <Link
-          className={`h1 hover:text-sky-500 hover:custom-animation transition-all duration-100 delay-100 py-8 px-4`}
-          href="/resume">resume
-        </Link>
-        <Link
-          className={`h1 hover:text-sky-500 hover:custom-animation transition-all duration-100 delay-100 py-8 px-4`}
-          href="/">home
-        </Link>
+        <motion.button
+          className='py-8 px-4 h1'
+          initial={{ opacity: 0, scale: 0.9, y: -20 }}
+          whileInView={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ repeat: 0, duration: 0.5, delay: 0, stiffness: 400, damping: 10, type: 'tween' }}
+          viewport={{ once: true }}
+        >
+          <Link href="/contact" className='header'>contact</Link>
+        </motion.button>
+        <motion.button
+          className='py-8 px-4 h1'
+          initial={{ opacity: 0, scale: 0.9, y: -20 }}
+          whileInView={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ repeat: 0, duration: 0.5, delay: 0.3, stiffness: 400, damping: 10, type: 'tween' }}
+          viewport={{ once: true }}
+        >
+          <Link href="/works" className='header'>works</Link>
+        </motion.button>
+        <motion.button
+          className='py-8 px-4 h1'
+          initial={{ opacity: 0, scale: 0.9, y: -20 }}
+          whileInView={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ repeat: 0, duration: 0.5, delay: 0.6, stiffness: 400, damping: 10, type: 'tween' }}
+          viewport={{ once: true }}
+        >
+          <Link href="/resume" className='header'>resume</Link>
+        </motion.button>
+        <motion.button
+          className='py-8 px-4 h1'
+          initial={{ opacity: 0, scale: 0.9, y: -20 }}
+          whileInView={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ repeat: 0, duration: 0.5, delay: 0.9, stiffness: 400, damping: 10, type: 'tween' }}
+          viewport={{ once: true }}
+        >
+          <Link href="/" className='header'>home</Link>
+        </motion.button>
       </div>
       <div className='md:hidden flex flex-row gap-x-8 items-center justify-center'>
         <IoMdMenu className='icon' />
       </div>
-      <motion.div
+      <motion.button
         initial={{ opacity: 0, scale: 0.9 }}
-        whileInView={{ opacity: 1, scale: 1, x: 0 }}
-        whileHover={{ scale: 1.2, transform: 'rotate(360deg)' }}
-        transition={{ repeat: 0, duration: 0.5, delay: 0.1, stiffness: 400, damping: 10, type: 'tween' }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ repeat: 0, duration: 0.5, delay: 1.2, stiffness: 400, damping: 10, type: 'tween' }}
         viewport={{ once: true }}
         id="arashaltafi"
         className={`h1 flex flex-row gap-x-2 items-center justify-center transition-all duration-100 delay-100 *:hover:text-sky-500`}
         onClick={(e) => handleClickPdf(e)}>
         <span className='text-slate-400'>Arash</span>
         <span>Altafi</span>
-      </motion.div>
+      </motion.button>
     </header>
   )
 }

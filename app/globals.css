@@ -66,6 +66,10 @@
     @apply text-xl hover:-translate-y-2 transition-all delay-100 text-slate-900 dark:text-slate-100 hover:text-sky-500;
   }
 
+  .header {
+    @apply text-3xl hover:text-sky-500 transition-all;
+  }
+
   .custom-animation {
     animation: translateAndBack 0.5s ease-in-out infinite alternate;
   }
