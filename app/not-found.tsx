@@ -3,10 +3,14 @@
 import { Metadata } from 'next';
 import React from 'react';
 import { Player } from "@lottiefiles/react-lottie-player";
-import Link from 'next/link';
 const notFound = "/lotties/404.json";
 
 const NotFound = () => {
+
+    const handleClick = () => {
+        window.open("/", "_self")
+    }
+
     return (
         <div
             className='select-none w-full h-[90vh] flex flex-col items-center justify-around px-16 py-8 overflow-hidden'>
@@ -22,9 +26,9 @@ const NotFound = () => {
                 Page Not Found !
             </h1>
 
-            <Link href={'/'} className='btn btnPrimary'>
+            <button onClick={handleClick} className='btn btnPrimary'>
                 Back To Home
-            </Link>
+            </button>
         </div>
     )
 }
