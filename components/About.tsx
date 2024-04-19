@@ -11,7 +11,7 @@ import { motion } from "framer-motion"
 
 const About = () => {
     return (
-        <div className='relative w-full h-screen flex flex-row items-center justify-center'>
+        <div id='about' className='relative w-full h-screen flex flex-row items-center justify-center'>
             <div className='w-1/2 flex flex-col gap-4 items-start justify-center ps-32'>
                 <motion.h2
                     className='text-5xl'

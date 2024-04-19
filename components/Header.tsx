@@ -1,6 +1,5 @@
 "use client"
 
-import Link from 'next/link';
 import React, { useEffect } from 'react'
 import { IoMdMenu } from "react-icons/io";
 import tippy from 'tippy.js';
@@ -24,9 +23,13 @@ const Header = () => {
     });
   }, [])
 
+  const scrollToId = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+  }
+
   return (
     <header className='fixed left-0 right-0 top-0 w-full flex flex-row items-stretch justify-between z-30 py-4 px-8'>
-      <div className={`hidden md:flex flex-row gap-x-4 items-center justify-center *:capitalize backdrop-blur-[5px]`}>
+      <div className={`hidden md:flex flex-row gap-x-4 items-center justify-center backdrop-blur-[5px]`}>
         <motion.button
           className='py-8 px-4'
           initial={{ opacity: 0, scale: 0.9, y: -20 }}
@@ -34,7 +37,7 @@ const Header = () => {
           transition={{ repeat: 0, duration: 0.5, delay: 0, stiffness: 400, damping: 10, type: 'tween' }}
           viewport={{ once: true }}
         >
-          <Link href="/" className='header'>home</Link>
+          <button onClick={() => scrollTo(0, 0)} className='header'>Home</button>
         </motion.button>
         <motion.button
           className='py-8 px-4'
@@ -43,7 +46,7 @@ const Header = () => {
           transition={{ repeat: 0, duration: 0.5, delay: 0.3, stiffness: 400, damping: 10, type: 'tween' }}
           viewport={{ once: true }}
         >
-          <Link href="/contact" className='header'>about</Link>
+          <button onClick={() => scrollToId('about')} className='header'>About</button>
         </motion.button>
         <motion.button
           className='py-8 px-4'
@@ -52,7 +55,7 @@ const Header = () => {
           transition={{ repeat: 0, duration: 0.5, delay: 0.6, stiffness: 400, damping: 10, type: 'tween' }}
           viewport={{ once: true }}
         >
-          <Link href="/works" className='header'>skills</Link>
+          <button onClick={() => scrollToId('skills')} className='header'>Skills</button>
         </motion.button>
         <motion.button
           className='py-8 px-4'
@@ -61,7 +64,7 @@ const Header = () => {
           transition={{ repeat: 0, duration: 0.5, delay: 0.9, stiffness: 400, damping: 10, type: 'tween' }}
           viewport={{ once: true }}
         >
-          <Link href="/resume" className='header'>projects</Link>
+          <button onClick={() => scrollToId('projects')} className='header'>Projects</button>
         </motion.button>
       </div>
       <div className='md:hidden flex flex-row gap-x-8 items-center justify-center backdrop-blur-[5px]'>
