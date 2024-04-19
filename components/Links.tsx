@@ -4,7 +4,6 @@ import { openMail, openPhone } from "@/utils/Helper";
 import { FaGithub } from "react-icons/fa";
 import { FaTelegram } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { MdPhoneEnabled } from "react-icons/md";
@@ -55,7 +54,8 @@ const Links = () => {
 
     return (
         <>
-            <div className={`select-none fixed bottom-0 left-0 child:font-normal child:text-gray-300 flex flex-col items-center justify-center gap-6 py-4 px-2 md:px-8 md:py-6 mb-4 z-50'}`}>
+            <div className={`select-none fixed bottom-0 left-0 child:font-normal child:text-gray-300 flex flex-col items-center justify-center gap-6 py-4 px-2 md:px-8 md:py-6 mb-4 z-50}`}
+                style={{ zIndex: 999 }}>
                 <motion.p
                     className="text-xs md:text-sm lg:text-lg text-gray-300"
                     initial={{ opacity: 0, scale: 0.8, transform: 'rotate(90deg)' }}
@@ -96,20 +96,14 @@ const Links = () => {
                 <motion.div
                     initial={{ opacity: 0, scale: 0.8 }}
                     whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ repeat: 0, duration: 0.5, delay: 2.6, stiffness: 400, damping: 10, type: 'tween' }}
-                    viewport={{ once: true }}>
-                    <FaInstagram className="icon" onClick={() => handleClickLink(LinkType.INSTAGRAM)} />
-                </motion.div>
-                <motion.div
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ repeat: 0, duration: 0.5, delay: 2.8, stiffness: 400, damping: 10, type: 'tween' }}
                     viewport={{ once: true }}>
                     <FaLinkedin className="icon" onClick={() => handleClickLink(LinkType.LINKEDIN)} />
                 </motion.div>
             </div>
 
-            <div className={`select-none fixed bottom-0 right-0 child:font-normal child:text-gray-300 flex flex-col items-center justify-center gap-6 py-4 px-2 md:px-8 md:py-6 mb-4 z-50'}`}>
+            <div className={`select-none fixed bottom-0 right-0 child:font-normal child:text-gray-300 flex flex-col items-center justify-center gap-6 py-4 px-2 md:px-8 md:py-6 mb-4 z-50}`}
+                style={{ zIndex: 999 }}>
                 <motion.p
                     className="text-xs md:text-sm lg:text-lg text-gray-300"
                     initial={{ opacity: 0, scale: 0.8, transform: 'rotate(90deg)' }}
