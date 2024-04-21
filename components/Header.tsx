@@ -16,7 +16,7 @@ const Header = () => {
   }
 
   return (
-    <header className='fixed left-0 right-0 top-0 w-full flex flex-row items-stretch justify-between z-30 py-4 px-8'>
+    <header className='select-none fixed left-0 right-0 top-0 w-full flex flex-row items-stretch justify-between z-30 py-4 px-8'>
       <div className={`hidden md:flex flex-row gap-x-4 items-center justify-center backdrop-blur-[5px]`}>
         <motion.button
           className='py-8 px-4'

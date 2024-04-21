@@ -8,7 +8,7 @@ import Skills from "@/components/Skills";
 
 const Home = () => {
   return (
-    <div className="flex w-full min-h-screen flex-col items-center justify-center px-4 md:px-8 xl:px-16 py-4 overflow-x-hidden">
+    <div className="snap-y snap-proximity w-full h-screen px-4 md:px-8 xl:px-16 py-4 overflow-x-hidden">
       <ProgressBar />
       <Header />
       <Main />

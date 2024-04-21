@@ -22,7 +22,7 @@ const Main = () => {
     `;
 
     return (
-        <div className="select-none w-full h-screen flex items-center justify-center">
+        <div className="snap-start relative select-none w-full h-screen flex items-center justify-center">
             <ParticlesComponent particlesType={ParticlesType.Links} />
 
             <motion.div

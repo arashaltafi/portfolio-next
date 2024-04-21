@@ -102,7 +102,7 @@ const Skills = () => {
     }, [])
 
     return (
-        <div id='skills' className='select-none relative w-full h-screen flex flex-row items-center justify-center'>
+        <div id='skills' className='snap-start select-none relative w-full h-screen flex flex-row items-center justify-center'>
             <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}

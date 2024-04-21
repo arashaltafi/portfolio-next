@@ -24,7 +24,7 @@ const Projects = () => {
     }, [])
 
     return (
-        <div id='projects' className='select-none relative w-full h-screen flex flex-col items-center justify-center gap-16'>
+        <div id='projects' className='snap-start select-none relative w-full h-screen flex flex-col items-center justify-center gap-16'>
             <motion.h2
                 className='flex flex-row items-center justify-center gap-4 text-6xl'
                 initial={{ opacity: 0, scale: 0.8, x: 200 }}
