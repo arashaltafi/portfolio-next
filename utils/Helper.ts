@@ -24,7 +24,17 @@ const openPhone = (phone: string) => {
     }
 }
 
+const getDeviceSize = (): string => {
+    const width = window.innerWidth;
+    if (width >= 0 && width < 300) return 'xm';
+    if (width >= 300 && width < 480) return 'sm';
+    if (width >= 480 && width < 640) return 'md';
+    if (width >= 640 && width < 768) return 'lg';
+    return 'xl';
+}
+
 export {
     openMail,
-    openPhone
+    openPhone,
+    getDeviceSize
 }
