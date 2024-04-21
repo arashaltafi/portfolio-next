@@ -102,15 +102,16 @@ const Skills = () => {
     }, [])
 
     return (
-        <div id='skills' className='snap-start select-none relative w-full h-screen flex flex-row items-center justify-center'>
+        <div id='skills' className='snap-start select-none relative w-full h-screen flex flex-col md:flex-row items-center justify-center px-12 sm:px-16 md:px-24 lg:px-32 xl:px-32'>
             <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ repeat: 0, duration: 1, delay: 0.1, stiffness: 400, damping: 10, type: 'tween' }}
                 viewport={{ once: true }}
+                className='flex-1'
             >
                 <Player
-                    className='w-2/3'
+                    className='w-full'
                     src={animation}
                     autoplay
                     loop
@@ -118,9 +119,9 @@ const Skills = () => {
                 />
             </motion.div>
 
-            <div className='w-full flex flex-col gap-8 items-center justify-center'>
+            <div className='flex-1 w-full flex flex-col gap-8 items-center justify-center'>
                 <motion.h2
-                    className='flex flex-row items-center justify-center gap-4 text-6xl'
+                    className='flex flex-row items-center justify-center gap-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl'
                     initial={{ opacity: 0, scale: 0.8, x: 200 }}
                     whileInView={{ opacity: 1, scale: 1, x: 0 }}
                     transition={{ repeat: 0, duration: 0.5, delay: 0.3, stiffness: 400, damping: 10, type: 'tween' }}
@@ -134,14 +135,14 @@ const Skills = () => {
                         skills.map((skill) => (
                             <motion.div
                                 key={skill.id}
-                                className='flex flex-row items-center justify-center gap-2 text-2xl'
+                                className='flex flex-row items-center justify-center gap-2 text-md sm:text-lg md:text-xl lg:text-2xl xl:text-3xl'
                                 initial={{ opacity: 0, scale: 0.8, x: 200 }}
                                 whileInView={{ opacity: 1, scale: 1, x: 0 }}
                                 transition={{ repeat: 0, duration: 0.5 + skill.id * 0.1, delay: 0.6, stiffness: 400, damping: 10, type: 'tween' }}
                                 viewport={{ once: true }}
                             >
                                 <Tooltip anchorSelect={`#${skill.name}`} place="top" className='text-sm'>{skill.name}</Tooltip>
-                                <div id={skill.name} className='bg-slate-400 dark:bg-slate-800 hover:bg-slate-300 hover:dark:bg-slate-700 transition-all p-6 rounded-full'>
+                                <div id={skill.name} className='bg-slate-400 dark:bg-slate-800 hover:bg-slate-300 hover:dark:bg-slate-700 transition-all p-2 sm:p-3 md:p-4 lg:p-5 xl:p-6 rounded-full'>
                                     {skill.icon}
                                 </div>
                             </motion.div>
@@ -151,7 +152,7 @@ const Skills = () => {
             </div>
 
             <Image
-                className='absolute bottom-0 left-0 ml-[-4rem] -z-10'
+                className='absolute bottom-0 left-0 ml-[-8rem] md:ml-[-6rem] lg:ml-[-4rem] -z-10'
                 src="/images/pattern-l.svg"
                 height={700}
                 width={320}

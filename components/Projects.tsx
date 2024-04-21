@@ -120,7 +120,7 @@ const Projects = () => {
             </Swiper>
 
             <footer className='absolute bottom-0'>
-                <h2 className='text-center text-xl font-bold hover:text-sky-500 transition-all'>Code By Arash</h2>
+                <h2 className='text-center text-xl font-bold hover:text-sky-500 transition-all'>❤️Code By Arash❤️</h2>
             </footer>
         </div>
     )

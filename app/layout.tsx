@@ -57,9 +57,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${vazirFont.className} cursor-default lg:cursor-none`}
+        className={`${vazirFont.className} cursor-default md:cursor-none`}
       >
-        <Cursor className="hidden lg:block" />
+        <Cursor className="hidden md:block" />
         {children}
       </body>
     </html>

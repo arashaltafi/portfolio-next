@@ -8,7 +8,7 @@ import Skills from "@/components/Skills";
 
 const Home = () => {
   return (
-    <div className="snap-y snap-proximity w-full h-screen px-4 md:px-8 xl:px-16 py-4 overflow-x-hidden">
+    <div className="snap-y snap-proximity w-full h-screen px-2 sm:px-4 md:px-8 xl:px-16 py-4 overflow-x-hidden">
       <ProgressBar />
       <Header />
       <Main />
