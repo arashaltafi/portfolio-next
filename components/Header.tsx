@@ -15,6 +15,34 @@ const Header = () => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
   }
 
+  const handleMenu = () => {
+    const menu = document.getElementById("menu")
+    const blur = document.getElementById("blur")
+    if (menu && blur) {
+      menu.classList.remove("-translate-x-96")
+      blur.classList.remove("hidden")
+    }
+  }
+
+  const handleBlur = () => {
+    const menu = document.getElementById("menu")
+    const blur = document.getElementById("blur")
+    if (menu && blur) {
+      menu.classList.add("-translate-x-96")
+      blur.classList.add("hidden")
+    }
+  }
+
+  const handleScroll = (id: string) => {
+    scrollToId(id)
+    const menu = document.getElementById("menu")
+    const blur = document.getElementById("blur")
+    if (menu && blur) {
+      menu.classList.add("-translate-x-96")
+      blur.classList.add("hidden")
+    }
+  }
+
   return (
     <header className='select-none fixed left-0 right-0 top-0 w-full flex flex-row items-stretch justify-between z-30 py-6 px-8'>
       <div className={`hidden md:flex flex-row gap-x-4 items-center justify-center backdrop-blur-[5px]`}>
@@ -55,9 +83,50 @@ const Header = () => {
           <button onClick={() => scrollToId('projects')} className='header'>Projects</button>
         </motion.button>
       </div>
-      <div className='md:hidden flex flex-row gap-x-8 items-center justify-center backdrop-blur-[5px]'>
+      <div onClick={handleMenu} className='md:hidden flex flex-row gap-x-8 items-center justify-center backdrop-blur-[5px]'>
         <IoMdMenu className='icon' />
       </div>
+
+      <div
+        id='menu'
+        className='md:hidden transition-all duration-200 -translate-x-96 h-screen w-2/3 flex gap-14 flex-col gap-y-4 items-start justify-start absolute top-0 left-0 bg-slate-200 dark:bg-slate-800 py-8 px-6'
+        style={{ zIndex: 100 }}>
+        <button
+          onClick={() => handleScroll('home')}
+          className='header'>
+          Home
+        </button>
+
+        <span className='w-full h-px bg-slate-500 rounded-full' />
+
+        <button
+          onClick={() => handleScroll('about')}
+          className='header'>
+          About
+        </button>
+
+        <span className='w-full h-px bg-slate-500 rounded-full' />
+
+        <button
+          onClick={() => handleScroll('skills')}
+          className='header'>
+          Skills
+        </button>
+
+        <span className='w-full h-px bg-slate-500 rounded-full' />
+
+        <button
+          onClick={() => handleScroll('projects')}
+          className='header'>
+          Projects
+        </button>
+      </div>
+
+      <div
+        id='blur'
+        onClick={handleBlur}
+        className='md:hidden hidden w-full h-screen bg-slate-200/50 dark:bg-slate-800/50 absolute top-0 left-0 right-0 bottom-0'
+      />
 
       <Tooltip anchorSelect="#arashaltafi" place="bottom">
         <b>See Resume</b>

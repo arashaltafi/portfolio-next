@@ -54,8 +54,8 @@ const Links = () => {
 
     return (
         <>
-            <div className={`select-none fixed bottom-0 left-0 child:font-normal child:text-gray-300 flex flex-col items-center justify-center gap-6 py-4 px-2 md:px-8 md:py-6 mb-4 z-50}`}
-                style={{ zIndex: 999 }}>
+            <div className={`select-none fixed bottom-0 left-0 child:font-normal child:text-gray-300 flex flex-col items-center justify-center gap-6 py-4 px-2 md:px-8 md:py-6 mb-4}`}
+                style={{ zIndex: 20 }}>
                 <motion.p
                     className="text-xs md:text-sm lg:text-lg text-gray-300"
                     initial={{ opacity: 0, scale: 0.8, transform: 'rotate(90deg)' }}
@@ -102,8 +102,8 @@ const Links = () => {
                 </motion.div>
             </div>
 
-            <div className={`select-none fixed bottom-0 right-0 child:font-normal child:text-gray-300 flex flex-col items-center justify-center gap-6 py-4 px-2 md:px-8 md:py-6 mb-4 z-50}`}
-                style={{ zIndex: 999 }}>
+            <div className={`select-none fixed bottom-0 right-0 child:font-normal child:text-gray-300 flex flex-col items-center justify-center gap-6 py-4 px-2 md:px-8 md:py-6 mb-4}`}
+                style={{ zIndex: 20 }}>
                 <motion.p
                     className="text-xs md:text-sm lg:text-lg text-gray-300"
                     initial={{ opacity: 0, scale: 0.8, transform: 'rotate(90deg)' }}

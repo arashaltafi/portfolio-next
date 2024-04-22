@@ -22,7 +22,7 @@ const Main = () => {
     `;
 
     return (
-        <div className="snap-start relative select-none w-full h-screen flex items-center justify-center">
+        <div id='home' className="snap-start relative select-none w-full h-screen flex items-center justify-center">
             <ParticlesComponent particlesType={ParticlesType.Links} />
 
             <motion.div
@@ -46,7 +46,7 @@ const Main = () => {
             </motion.div>
 
 
-            <div className='text-2xl md:text-4xl lg:text-5xl xl:text-7xl absolute top-[25%] bottom-auto md:top-auto md:bottom-[25%]'>
+            <div className='text-center text-2xl md:text-4xl lg:text-5xl xl:text-7xl absolute top-[25%] bottom-auto md:top-auto md:bottom-[25%]'>
                 <Typewriter
                     options={{
                         autoStart: true,
