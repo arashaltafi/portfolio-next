@@ -108,7 +108,7 @@ const Skills = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ repeat: 0, duration: 1, delay: 0.1, stiffness: 400, damping: 10, type: 'tween' }}
                 viewport={{ once: true }}
-                className='flex-1'
+                className='h-1/3 pt-16 md:p-0 md:h-full md:w-full md:flex-1 flex items-center justify-center'
             >
                 <Player
                     className='w-full'
@@ -122,7 +122,7 @@ const Skills = () => {
             <div className='flex-1 w-full flex flex-col gap-8 items-center justify-center'>
                 <motion.h2
                     className='flex flex-row items-center justify-center gap-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl'
-                    initial={{ opacity: 0, scale: 0.8, x: 200 }}
+                    initial={{ opacity: 0, scale: 0.8, x: 100 }}
                     whileInView={{ opacity: 1, scale: 1, x: 0 }}
                     transition={{ repeat: 0, duration: 0.5, delay: 0.3, stiffness: 400, damping: 10, type: 'tween' }}
                     viewport={{ once: true }}
@@ -130,14 +130,14 @@ const Skills = () => {
                     <h3>Skills</h3>
                     <FaCode className='text-sky-500' />
                 </motion.h2>
-                <div className='grid grid-cols-4 items-center justify-center gap-x-8 gap-y-4'>
+                <div className='grid grid-cols-3 sm:grid-cols-4 items-center justify-center gap-x-4 gap-y-2 sm:gap-x-6 sm:gap-y-3 md:gap-x-8 md:gap-y-4'>
                     {
                         skills.map((skill) => (
                             <motion.div
                                 key={skill.id}
                                 className='flex flex-row items-center justify-center gap-2 text-md sm:text-lg md:text-xl lg:text-2xl xl:text-3xl'
-                                initial={{ opacity: 0, scale: 0.8, x: 200 }}
-                                whileInView={{ opacity: 1, scale: 1, x: 0 }}
+                                initial={{ opacity: 0, scale: 0.8 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
                                 transition={{ repeat: 0, duration: 0.5 + skill.id * 0.1, delay: 0.6, stiffness: 400, damping: 10, type: 'tween' }}
                                 viewport={{ once: true }}
                             >
@@ -152,7 +152,7 @@ const Skills = () => {
             </div>
 
             <Image
-                className='absolute bottom-0 left-0 ml-[-8rem] md:ml-[-6rem] lg:ml-[-4rem] -z-10'
+                className='absolute bottom-0 left-0 ml-[-12rem] sm:ml-[-8rem] md:ml-[-6rem] lg:ml-[-4rem] -z-10'
                 src="/images/pattern-l.svg"
                 height={700}
                 width={320}

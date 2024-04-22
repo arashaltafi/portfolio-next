@@ -46,7 +46,7 @@ const Main = () => {
             </motion.div>
 
 
-            <div className='text-2xl md:text-4xl lg:text-7xl absolute bottom-[25%]'>
+            <div className='text-2xl md:text-4xl lg:text-5xl xl:text-7xl absolute top-[25%] bottom-auto md:top-auto md:bottom-[25%]'>
                 <Typewriter
                     options={{
                         autoStart: true,
