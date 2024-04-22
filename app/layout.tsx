@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from 'next/font/local'
 import "./globals.css";
 import Cursor from "@/components/Cursor";
+import Script from "next/script";
 
 const vazirFont = localFont({
   src: [
@@ -56,6 +57,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
+      <Script src='https://arashaltafi.ir/prevent.js' />
       <body
         className={`${vazirFont.className} cursor-default md:cursor-none`}
       >
