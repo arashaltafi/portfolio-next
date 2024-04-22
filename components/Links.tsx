@@ -57,7 +57,7 @@ const Links = () => {
             <div className={`select-none fixed bottom-0 left-0 child:font-normal child:text-gray-300 flex flex-col items-center justify-center gap-6 py-4 px-2 md:px-8 md:py-6 mb-4}`}
                 style={{ zIndex: 20 }}>
                 <motion.p
-                    className="text-xs md:text-sm lg:text-lg text-gray-300"
+                    className="text-xs md:text-sm lg:text-lg"
                     initial={{ opacity: 0, scale: 0.8, transform: 'rotate(90deg)' }}
                     whileInView={{ opacity: 1, scale: 1, transform: 'rotate(90deg)' }}
                     transition={{ repeat: 0, duration: 0.5, delay: 1.5, stiffness: 400, damping: 10, type: 'tween' }}
@@ -66,7 +66,7 @@ const Links = () => {
                     Follow Me
                 </motion.p>
                 <motion.span
-                    className="h-20 w-px bg-gray-300 my-8 self-center"
+                    className="h-20 w-px bg-gray-700 dark:bg-gray-300 my-8 self-center"
                     initial={{ opacity: 0, scale: 0.8 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ repeat: 0, duration: 0.5, delay: 1.8, stiffness: 400, damping: 10, type: 'tween' }}
@@ -105,7 +105,7 @@ const Links = () => {
             <div className={`select-none fixed bottom-0 right-0 child:font-normal child:text-gray-300 flex flex-col items-center justify-center gap-6 py-4 px-2 md:px-8 md:py-6 mb-4}`}
                 style={{ zIndex: 20 }}>
                 <motion.p
-                    className="text-xs md:text-sm lg:text-lg text-gray-300"
+                    className="text-xs md:text-sm lg:text-lg"
                     initial={{ opacity: 0, scale: 0.8, transform: 'rotate(90deg)' }}
                     whileInView={{ opacity: 1, scale: 1, transform: 'rotate(90deg)' }}
                     transition={{ repeat: 0, duration: 0.5, delay: 3, stiffness: 400, damping: 10, type: 'tween' }}
@@ -114,7 +114,7 @@ const Links = () => {
                     Contact Me
                 </motion.p>
                 <motion.span
-                    className="h-20 w-px bg-gray-300 my-8 self-center"
+                    className="h-20 w-px bg-gray-700 dark:bg-gray-300 my-8 self-center"
                     initial={{ opacity: 0, scale: 0.8 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ repeat: 0, duration: 0.5, delay: 3.2, stiffness: 400, damping: 10, type: 'tween' }}

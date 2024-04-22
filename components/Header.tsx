@@ -1,11 +1,91 @@
 "use client"
 
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { IoMdMenu } from "react-icons/io";
 import { motion } from "framer-motion"
 import { Tooltip } from 'react-tooltip'
+import { MdLightMode } from "react-icons/md";
+import { MdNightlightRound } from "react-icons/md";
 
 const Header = () => {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    if (localStorage.getItem('theme') === 'dark') {
+      document.documentElement.classList.add('dark');
+      setIsDarkMode(true)
+    } else if (localStorage.getItem('theme') === 'light') {
+      document.documentElement.classList.remove('dark')
+      setIsDarkMode(false)
+    } else {
+      try {
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+          const newColorScheme = event.matches ? "dark" : "light";
+          if (newColorScheme == "dark") {
+            document.documentElement.classList.add('dark');
+            setIsDarkMode(true)
+          } else {
+            document.documentElement.classList.remove('dark');
+            setIsDarkMode(false)
+          }
+        });
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.documentElement.classList.add('dark');
+          setIsDarkMode(true)
+        } else {
+          document.documentElement.classList.remove('dark');
+          setIsDarkMode(false)
+        }
+      } catch (error: any) {
+        document.documentElement.classList.add('dark');
+        setIsDarkMode(true)
+      }
+    }
+  }, [])
+
+  const changeTheme = (theme: string) => {
+    if (theme === 'dark') {
+      localStorage.setItem('theme', 'dark');
+      document.documentElement.classList.add('dark');
+      setIsDarkMode(true)
+    } else if (theme === 'light') {
+      localStorage.setItem('theme', 'light');
+      document.documentElement.classList.remove('dark')
+      setIsDarkMode(false)
+    } else {
+      localStorage.setItem('theme', 'auto');
+      try {
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+          const newColorScheme = event.matches ? "dark" : "light";
+          if (newColorScheme == "dark") {
+            document.documentElement.classList.add('dark');
+            setIsDarkMode(true)
+          } else {
+            document.documentElement.classList.remove('dark');
+            setIsDarkMode(false)
+          }
+        });
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.documentElement.classList.add('dark');
+          setIsDarkMode(true)
+        } else {
+          document.documentElement.classList.remove('dark');
+          setIsDarkMode(false)
+        }
+      } catch (error: any) {
+        document.documentElement.classList.add('dark');
+        setIsDarkMode(true)
+      }
+    }
+
+    const menu = document.getElementById("menu")
+    const blur = document.getElementById("blur")
+    if (menu && blur) {
+      menu.classList.add("-translate-x-96")
+      blur.classList.add("hidden")
+    }
+  }
+
   const handleClickPdf = (e: any) => {
     e.preventDefault();
     window.open("https://arashaltafi.ir/resume_en.pdf");
@@ -120,6 +200,14 @@ const Header = () => {
           className='header'>
           Projects
         </button>
+
+        <div className='w-full flex-1 flex items-end justify-center'>
+          {
+            isDarkMode ?
+              <MdLightMode onClick={() => changeTheme("light")} /> :
+              <MdNightlightRound onClick={() => changeTheme("dark")} />
+          }
+        </div>
       </div>
 
       <div
