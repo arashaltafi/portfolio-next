@@ -81,7 +81,7 @@ const Header = () => {
     const menu = document.getElementById("menu")
     const blur = document.getElementById("blur")
     if (menu && blur) {
-      menu.classList.add("-translate-x-96")
+      menu.classList.add("-translate-x-[500px]")
       blur.classList.add("hidden")
     }
   }
@@ -99,7 +99,7 @@ const Header = () => {
     const menu = document.getElementById("menu")
     const blur = document.getElementById("blur")
     if (menu && blur) {
-      menu.classList.remove("-translate-x-96")
+      menu.classList.remove("-translate-x-[500px]")
       blur.classList.remove("hidden")
     }
   }
@@ -108,7 +108,7 @@ const Header = () => {
     const menu = document.getElementById("menu")
     const blur = document.getElementById("blur")
     if (menu && blur) {
-      menu.classList.add("-translate-x-96")
+      menu.classList.add("-translate-x-[500px]")
       blur.classList.add("hidden")
     }
   }
@@ -118,7 +118,7 @@ const Header = () => {
     const menu = document.getElementById("menu")
     const blur = document.getElementById("blur")
     if (menu && blur) {
-      menu.classList.add("-translate-x-96")
+      menu.classList.add("-translate-x-[500px]")
       blur.classList.add("hidden")
     }
   }
@@ -126,6 +126,19 @@ const Header = () => {
   return (
     <header className='select-none fixed left-0 right-0 top-0 w-full flex flex-row items-stretch justify-between z-30 py-6 px-8'>
       <div className={`hidden md:flex flex-row gap-x-4 items-center justify-center backdrop-blur-[5px]`}>
+        <motion.div
+          className='py-8 px-2'
+          initial={{ opacity: 0, scale: 0.9, y: -20 }}
+          whileInView={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ repeat: 0, duration: 0.5, delay: 0, stiffness: 400, damping: 10, type: 'tween' }}
+          viewport={{ once: true }}
+        >
+          {
+            isDarkMode ?
+              <MdLightMode className='header cursor-pointer' onClick={() => changeTheme("light")} /> :
+              <MdNightlightRound className='header cursor-pointer' onClick={() => changeTheme("dark")} />
+          }
+        </motion.div>
         <motion.button
           className='py-8 px-4'
           initial={{ opacity: 0, scale: 0.9, y: -20 }}
@@ -169,7 +182,7 @@ const Header = () => {
 
       <div
         id='menu'
-        className='md:hidden transition-all duration-200 -translate-x-96 h-screen w-2/3 flex gap-14 flex-col gap-y-4 items-start justify-start absolute top-0 left-0 bg-slate-200 dark:bg-slate-800 py-8 px-6'
+        className='md:hidden transition-all duration-200 -translate-x-[500px] h-screen w-2/3 flex gap-14 flex-col gap-y-4 items-start justify-start absolute top-0 left-0 bg-slate-200 dark:bg-slate-800 py-8 px-6'
         style={{ zIndex: 100 }}>
         <button
           onClick={() => handleScroll('home')}
