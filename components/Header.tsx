@@ -6,6 +6,7 @@ import { motion } from "framer-motion"
 import { Tooltip } from 'react-tooltip'
 import { MdLightMode } from "react-icons/md";
 import { MdNightlightRound } from "react-icons/md";
+import { IoCloseCircle } from "react-icons/io5";
 
 const Header = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -182,11 +183,16 @@ const Header = () => {
 
       <div
         id='menu'
-        className='md:hidden transition-all duration-200 -translate-x-[500px] h-screen w-2/3 flex gap-14 flex-col gap-y-4 items-start justify-start absolute top-0 left-0 bg-slate-200 dark:bg-slate-800 py-8 px-6'
+        className='md:hidden transition-all duration-300 -translate-x-[500px] h-screen w-2/3 flex gap-14 flex-col gap-y-4 items-start justify-start absolute top-0 left-0 bg-slate-200 dark:bg-slate-800 py-8 px-6'
         style={{ zIndex: 100 }}>
+        <IoCloseCircle
+          onClick={handleBlur}
+          className='header self-end'
+        />
+
         <button
           onClick={() => handleScroll('home')}
-          className='header'>
+          className='mt-8 header'>
           Home
         </button>
 

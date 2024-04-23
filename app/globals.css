@@ -71,7 +71,7 @@
   }
 
   .header {
-    @apply text-2xl hover:text-sky-500 transition-all;
+    @apply text-xl lg:text-2xl hover:text-sky-500 transition-all;
   }
 
   .custom-animation {
