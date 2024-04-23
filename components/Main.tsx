@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import React from 'react'
-import ParticlesComponent, { ParticlesType } from './ParticlesComponent'
+import ParticlesComponent from './ParticlesComponent'
 import Typewriter from 'typewriter-effect';
 import { motion } from "framer-motion"
 
@@ -23,7 +23,7 @@ const Main = () => {
 
     return (
         <div id='home' className="snap-start relative select-none w-full h-screen flex items-center justify-center">
-            <ParticlesComponent particlesType={ParticlesType.Links} />
+            <ParticlesComponent />
 
             <motion.div
                 className="w-full md:w-3/4 lg:w-2/3 max-h-auto mx-auto contrast-[110%] brightness-105 hover:brightness-110 drop-shadow-3xl hover:drop-shadow-4xl self-end"
