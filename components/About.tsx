@@ -30,7 +30,7 @@ const About = () => {
                     transition={{ repeat: 0, duration: 1, delay: 0.6, stiffness: 400, damping: 10, type: 'tween' }}
                     viewport={{ once: true }}
                 >
-                    <h3>I'm Arash Altafi</h3>
+                    <h3>{`I'm Arash Altafi`}</h3>
                     <IoMdPerson />
                 </motion.div>
                 <motion.div

@@ -11,15 +11,10 @@ const Cursor = (props: CursorProps) => {
 
   useEffect(() => {
     addEventListeners();
-    return () => removeEventListeners();
   }, [])
 
   const addEventListeners = () => {
     document.addEventListener('mousemove', onMouseMove);
-  }
-
-  const removeEventListeners = () => {
-    document.removeEventListener('mousemove', onMouseMove);
   }
 
   const onMouseMove = (e: MouseEvent) => {
