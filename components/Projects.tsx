@@ -67,7 +67,7 @@ const Projects = () => {
                 transition={{ repeat: 0, duration: 0.5, delay: 0.3, stiffness: 400, damping: 10, type: 'tween' }}
                 viewport={{ once: true }}
             >
-                <h3>Projects</h3>
+                <p>Projects</p>
                 <RiComputerLine className='text-sky-500' />
             </motion.h2>
 

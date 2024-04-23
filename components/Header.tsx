@@ -141,40 +141,44 @@ const Header = () => {
           }
         </motion.div>
         <motion.button
-          className='py-8 px-4'
+          className='py-8 px-4 header'
+          onClick={() => scrollToId('home')}
           initial={{ opacity: 0, scale: 0.9, y: -20 }}
           whileInView={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ repeat: 0, duration: 0.5, delay: 0, stiffness: 400, damping: 10, type: 'tween' }}
           viewport={{ once: true }}
         >
-          <button onClick={() => scrollTo(0, 0)} className='header'>Home</button>
+          Home
         </motion.button>
         <motion.button
-          className='py-8 px-4'
+          className='py-8 px-4 header'
+          onClick={() => scrollToId('about')}
           initial={{ opacity: 0, scale: 0.9, y: -20 }}
           whileInView={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ repeat: 0, duration: 0.5, delay: 0.3, stiffness: 400, damping: 10, type: 'tween' }}
           viewport={{ once: true }}
         >
-          <button onClick={() => scrollToId('about')} className='header'>About</button>
+          About
         </motion.button>
         <motion.button
-          className='py-8 px-4'
+          className='py-8 px-4 header'
+          onClick={() => scrollToId('skills')}
           initial={{ opacity: 0, scale: 0.9, y: -20 }}
           whileInView={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ repeat: 0, duration: 0.5, delay: 0.6, stiffness: 400, damping: 10, type: 'tween' }}
           viewport={{ once: true }}
         >
-          <button onClick={() => scrollToId('skills')} className='header'>Skills</button>
+          Skills
         </motion.button>
         <motion.button
-          className='py-8 px-4'
+          className='py-8 px-4 header'
+          onClick={() => scrollToId('projects')}
           initial={{ opacity: 0, scale: 0.9, y: -20 }}
           whileInView={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ repeat: 0, duration: 0.5, delay: 0.9, stiffness: 400, damping: 10, type: 'tween' }}
           viewport={{ once: true }}
         >
-          <button onClick={() => scrollToId('projects')} className='header'>Projects</button>
+          Projects
         </motion.button>
       </div>
       <div onClick={handleMenu} className='md:hidden flex flex-row gap-x-8 items-center justify-center backdrop-blur-[5px]'>

@@ -127,7 +127,7 @@ const Skills = () => {
                     transition={{ repeat: 0, duration: 0.5, delay: 0.3, stiffness: 400, damping: 10, type: 'tween' }}
                     viewport={{ once: true }}
                 >
-                    <h3>Skills</h3>
+                    <p>Skills</p>
                     <FaCode className='text-sky-500' />
                 </motion.h2>
                 <div className='grid grid-cols-3 sm:grid-cols-4 items-center justify-center gap-x-4 gap-y-2 sm:gap-x-6 sm:gap-y-3 md:gap-x-8 md:gap-y-4'>
