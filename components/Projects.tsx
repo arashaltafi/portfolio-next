@@ -14,48 +14,84 @@ const Projects = () => {
         id: number,
         title: string,
         desc: string,
-        image: string
+        image: string,
+        link: string
     }[]>([])
 
     useEffect(() => {
         setProjects([
             {
                 id: 1,
-                title: "Lorem 1",
-                desc: "Lorem 1 ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
-                image: "https://arashaltafi.ir/arash.jpg"
+                title: "Chat App",
+                desc: "Mern Stack, SocketIo",
+                image: "/images/chat.jpg",
+                link: "http://chat.arashaltafi.ir/"
             }, {
                 id: 2,
-                title: "Lorem 2",
-                desc: "Lorem 2 ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
-                image: "https://arashaltafi.ir/arash.jpg"
+                title: "Tv Online",
+                desc: "React, Ts, ExpressJs, Mysql",
+                image: "/images/tv.jpg",
+                link: "https://tv.arashaltafi.ir/"
             }, {
                 id: 3,
-                title: "Lorem 3",
-                desc: "Lorem 3 ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
-                image: "https://arashaltafi.ir/arash.jpg"
+                title: "English Teacher",
+                desc: "React, Ts, Php, Mysql",
+                image: "/images/english.jpg",
+                link: "https://englishteacher.arashaltafi.ir/"
             }, {
                 id: 4,
-                title: "Lorem 4",
-                desc: "Lorem 4 ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
-                image: "https://arashaltafi.ir/arash.jpg"
+                title: "Portfolio 1",
+                desc: "React, Ts",
+                image: "/images/app1.jpg",
+                link: "https://app.arashaltafi.ir/"
             }, {
                 id: 5,
-                title: "Lorem 5",
-                desc: "Lorem 5 ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
-                image: "https://arashaltafi.ir/arash.jpg"
+                title: "Portfolio 2",
+                desc: "Next, Ts, Tailwind",
+                image: "/images/app2.jpg",
+                link: "https://app2.arashaltafi.ir/"
             }, {
                 id: 6,
-                title: "Lorem 6",
-                desc: "Lorem 6 ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
-                image: "https://arashaltafi.ir/arash.jpg"
+                title: "ShortLink",
+                desc: "NodeJs, ExpressJs, Mysql",
+                image: "/images/shortlink.jpg",
+                link: "https://shortlink.arashaltafi.ir/"
+            }, {
+                id: 7,
+                title: "Meditation",
+                desc: "React, Ts, TailwindCss",
+                image: "/images/meditation.jpg",
+                link: "https://meditation.arashaltafi.ir/"
+            }, {
+                id: 8,
+                title: "Coffee Shop",
+                desc: "TailwindCss",
+                image: "/images/coffee.jpg",
+                link: "https://coffee.arashaltafi.ir/"
+            }, {
+                id: 9,
+                title: "DigiKala",
+                desc: "ReactJs, Sass",
+                image: "/images/digikala.jpg",
+                link: "https://digikala.arashaltafi.ir/"
+            }, {
+                id: 10,
+                title: "Calculator",
+                desc: "ReactJs, TailwindCss",
+                image: "/images/calculator.jpg",
+                link: "https://calculator.arashaltafi.ir/"
+            }, {
+                id: 12,
+                title: "Todo",
+                desc: "React, Ts, IndexDb, MUI",
+                image: "/images/todo.jpg",
+                link: "https://todo.arashaltafi.ir/"
             }
         ])
     }, [])
 
-    const handleClick = (id: number) => {
-        console.log(id)
-        console.log(getDeviceSize())
+    const handleClick = (link: string) => {
+        window.open(link, "_blank")
     }
 
     return (
@@ -94,7 +130,7 @@ const Projects = () => {
                     projects.map((project) => (
                         <SwiperSlide
                             key={project.id}
-                            onClick={() => handleClick(project.id)}
+                            onClick={() => handleClick(project.link)}
                             className="w-full h-full rounded-lg md:rounded-xl hover:scale-[101%] active:scale-[99%] transition-all duration-200">
                             <div
                                 className={`overflow-hidden relative w-full h-full rounded-lg md:rounded-xl border border-solid border-sky-500 flex flex-col items-center justify-center gap-4`}
