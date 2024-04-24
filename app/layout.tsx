@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import localFont from 'next/font/local'
 import "./globals.css";
 import Cursor from "@/components/Cursor";
@@ -48,6 +48,13 @@ export const metadata: Metadata = {
   icons: {
     icon: "/images/arash.png",
   }
+}
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
 }
 
 export default function RootLayout({
