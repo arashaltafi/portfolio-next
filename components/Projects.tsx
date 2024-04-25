@@ -90,7 +90,13 @@ const Projects = () => {
         ])
     }, [])
 
-    const handleClick = (link: string) => {
+    const handleClick = (e: MouseEvent | TouchEvent | PointerEvent) => {
+        const id = Number(e?.target?.id || 0) 
+        if (id === 0 || isNaN(id)) return
+
+        const link = projects[id - 1].link || ""
+        if (link === "") return
+
         window.open(link, "_blank")
     }
 
@@ -125,14 +131,15 @@ const Projects = () => {
                 slidesPerView={getDeviceSize() === 'xm' ? 1 : getDeviceSize() === 'sm' ? 1 : getDeviceSize() === 'md' ? 2 : 2}
                 loop={true}
                 effect={'coverflow'}
+                onClick={(_, e) => {handleClick(e)}}
             >
                 {
                     projects.map((project) => (
                         <SwiperSlide
                             key={project.id}
-                            onClick={() => handleClick(project.link)}
                             className="w-full h-full rounded-lg md:rounded-xl hover:scale-[101%] active:scale-[99%] transition-all duration-200">
                             <div
+                                id={`${project.id}`}
                                 className={`overflow-hidden relative w-full h-full rounded-lg md:rounded-xl border border-solid border-sky-500 flex flex-col items-center justify-center gap-4`}
                                 style={{
                                     backgroundImage: `url(${project.image})`,
@@ -143,9 +150,9 @@ const Projects = () => {
                                     boxShadow: "2px 2px 20px 2px rgba(255, 255, 255, 0.4)"
                                 }}
                             >
-                                <div className='absolute inset-0 rounded-lg md:rounded-xl p-1 opacity-30 w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-slate-500 to-slate-200 dark:from-slate-800 dark:to-slate-500' />
+                                <div id={`${project.id}`} className='absolute inset-0 rounded-lg md:rounded-xl p-1 opacity-30 w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-slate-500 to-slate-200 dark:from-slate-800 dark:to-slate-500' />
 
-                                <div className='w-full h-full flex flex-col items-start justify-between'>
+                                <div id={`${project.id}`} className='w-full h-full flex flex-col items-start justify-between'>
                                     <h2
                                         className='text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-white bg-black/50 w-full p-3 line-clamp-1 text-ellipsis text-nowrap'
                                         style={{
