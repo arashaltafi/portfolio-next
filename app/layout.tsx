@@ -82,7 +82,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <Script src='https://arashaltafi.ir/prevent.js' />
+      <Script src='/script.js' />
       <body
         className={`${vazirFont.className} cursor-default md:cursor-none`}
       >
