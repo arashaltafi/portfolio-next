@@ -47,6 +47,24 @@ export const metadata: Metadata = {
   ],
   icons: {
     icon: "/images/arash.png",
+  },
+  viewport: "width=device-width, initial-scale=1.0, maximum-scale=1.0,  viewport-fit=cover, user-scalable=no",
+  themeColor: '#f8f8f8',
+  appleWebApp: {
+    title: 'Arash Altafi',
+    capable: true,
+    statusBarStyle: 'default',
+  },
+  manifest: '/manifest.json',
+  other: {
+    "msapplication-TileColor": "#f8f8f8",
+    "msapplication-TileImage": "/images/arash.png",
+    "theme-color": "#f8f8f8",
+    "apple-mobile-web-app-status-bar-style": "default",
+    "apple-mobile-web-app-title": "Arash Altafi",
+    "google": "notranslate",
+    "charset": "UTF-8",
+    "darkreader-lock": "",
   }
 }
 
