@@ -19,28 +19,32 @@ const Header = () => {
       document.documentElement.classList.remove('dark')
       setIsDarkMode(false)
     } else {
-      try {
-        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
-          const newColorScheme = event.matches ? "dark" : "light";
-          if (newColorScheme == "dark") {
-            document.documentElement.classList.add('dark');
-            setIsDarkMode(true)
-          } else {
-            document.documentElement.classList.remove('dark');
-            setIsDarkMode(false)
-          }
-        });
-        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-          document.documentElement.classList.add('dark');
-          setIsDarkMode(true)
-        } else {
-          document.documentElement.classList.remove('dark');
-          setIsDarkMode(false)
-        }
-      } catch (error: any) {
-        document.documentElement.classList.add('dark');
-        setIsDarkMode(true)
-      }
+      document.documentElement.classList.add('dark');
+      setIsDarkMode(true)
+
+      //get from system default color
+      // try {
+      //   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+      //     const newColorScheme = event.matches ? "dark" : "light";
+      //     if (newColorScheme == "dark") {
+      //       document.documentElement.classList.add('dark');
+      //       setIsDarkMode(true)
+      //     } else {
+      //       document.documentElement.classList.remove('dark');
+      //       setIsDarkMode(false)
+      //     }
+      //   });
+      //   if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      //     document.documentElement.classList.add('dark');
+      //     setIsDarkMode(true)
+      //   } else {
+      //     document.documentElement.classList.remove('dark');
+      //     setIsDarkMode(false)
+      //   }
+      // } catch (error: any) {
+      //   document.documentElement.classList.add('dark');
+      //   setIsDarkMode(true)
+      // }
     }
   }, [])
 

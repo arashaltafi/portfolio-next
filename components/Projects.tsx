@@ -25,7 +25,7 @@ const Projects = () => {
                 title: "Chat App",
                 desc: "Mern Stack, SocketIo",
                 image: "/images/chat.jpg",
-                link: "http://chat.arashaltafi.ir/"
+                link: "https://mychats.ir"
             }, {
                 id: 2,
                 title: "Tv Online",
@@ -91,7 +91,7 @@ const Projects = () => {
     }, [])
 
     const handleClick = (e: MouseEvent | TouchEvent | PointerEvent) => {
-        const id = Number(e?.target?.id || 0) 
+        const id = Number((e.target as HTMLElement)?.id || 0);
         if (id === 0 || isNaN(id)) return
 
         const link = projects[id - 1].link || ""
