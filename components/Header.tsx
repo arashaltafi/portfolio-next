@@ -100,12 +100,20 @@ const Header = () => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
   }
 
+  // close menu on back click 
+  useEffect(() => {
+    window.addEventListener('popstate', () => {
+      handleBlur()
+    })
+  }, [])
+
   const handleMenu = () => {
     const menu = document.getElementById("menu")
     const blur = document.getElementById("blur")
     if (menu && blur) {
       menu.classList.remove("-translate-x-[500px]")
       blur.classList.remove("hidden")
+      window.history.pushState(null, document.title, document.location.href)
     }
   }
 

@@ -22,60 +22,66 @@ const Projects = () => {
         setProjects([
             {
                 id: 1,
+                title: "coffee Shop Next",
+                desc: "NextJs, Ts, Tailwind, Mui",
+                image: "/images/coffee2.jpg",
+                link: "https://online-shops.ir/"
+            }, {
+                id: 1,
                 title: "Chat App",
                 desc: "Mern Stack, SocketIo",
                 image: "/images/chat.jpg",
                 link: "https://mychats.ir"
             }, {
-                id: 2,
+                id: 3,
                 title: "Tv Online",
                 desc: "React, Ts, ExpressJs, Mysql",
                 image: "/images/tv.jpg",
                 link: "https://tv.arashaltafi.ir/"
             }, {
-                id: 3,
+                id: 4,
                 title: "English Teacher",
                 desc: "React, Ts, Php, Mysql",
                 image: "/images/english.jpg",
                 link: "https://englishteacher.arashaltafi.ir/"
             }, {
-                id: 4,
+                id: 5,
                 title: "Portfolio 1",
                 desc: "React, Ts",
                 image: "/images/app1.jpg",
                 link: "https://app.arashaltafi.ir/"
             }, {
-                id: 5,
+                id: 6,
                 title: "Portfolio 2",
                 desc: "Next, Ts, Tailwind",
                 image: "/images/app2.jpg",
                 link: "https://app2.arashaltafi.ir/"
             }, {
-                id: 6,
+                id: 7,
                 title: "ShortLink",
                 desc: "NodeJs, ExpressJs, Mysql",
                 image: "/images/shortlink.jpg",
                 link: "https://shortlink.arashaltafi.ir/"
             }, {
-                id: 7,
+                id: 8,
                 title: "Meditation",
                 desc: "React, Ts, TailwindCss",
                 image: "/images/meditation.jpg",
                 link: "https://meditation.arashaltafi.ir/"
             }, {
-                id: 8,
+                id: 9,
                 title: "Coffee Shop",
                 desc: "TailwindCss",
                 image: "/images/coffee.jpg",
                 link: "https://coffee.arashaltafi.ir/"
             }, {
-                id: 9,
+                id: 10,
                 title: "DigiKala",
                 desc: "ReactJs, Sass",
                 image: "/images/digikala.jpg",
                 link: "https://digikala.arashaltafi.ir/"
             }, {
-                id: 10,
+                id: 11,
                 title: "Calculator",
                 desc: "ReactJs, TailwindCss",
                 image: "/images/calculator.jpg",
